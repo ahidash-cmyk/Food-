@@ -1,4 +1,11 @@
-const RecipeCard = ({ meal }: any) => {
+export interface Meal {
+  idMeal: string;
+  strMeal: string;
+  strMealThumb: string;
+}
+
+
+const RecipeCard = ({ meal }: { meal: Meal }) => {
   return (
     <div className="w-48">
       <img src={meal.strMealThumb} className="rounded-lg" />
